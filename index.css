@@ -1,0 +1,51 @@
+
+body {
+    background-color: #212121;
+    font-family: sans-serif;
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 15px;
+}
+
+
+
+.line{
+    background-color: white;
+    height: 2px;
+    border-radius: 25px;
+}
+
+input[type=text] {
+    color: white;
+    background-color: #212121;
+    border: 2px solid rgba(255, 255, 255, .4);
+    display: table-cell;
+    text-align: left;
+}
+
+label {
+    display: table-cell;
+    text-align: left;
+    width: 200px;
+}
+
+p {
+    child-align: left;
+    display: flex;
+}
+img {
+    width: 100px;
+    height: 100px;
+}
+
+input[type=button] {
+    background-color: #0083b7;
+    border: none;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 25px;
+}

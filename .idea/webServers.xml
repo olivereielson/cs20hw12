@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5d9c7f7b-74b4-41f5-a21b-362c58a95538" name="sitegroun" url="http://ftp.olivere3.sg-host.com">
+        <fileTransfer rootFolder="/olivere3.sg-host.com/public_html" host="ftp.olivere3.sg-host.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
