@@ -46,10 +46,10 @@
             border-spacing: 10px;
             border-collapse: separate;
         }
-        #hhe{
-            float: none;
-            margin-left: 25px;
-        }
+       .line{
+           height: 2px;
+           color: white;
+       }
     </style>
 </head>
 
@@ -63,16 +63,24 @@
 
 
 <div class="box">
+    <h2>Personal Info</h2>
+    <h3><?php echo $_GET["fname"]." ".$_GET["lname"]; ?></h3>
+    <h3><?php echo $_GET["instructions"]; ?></h3>
+</div>
+
+<div class="box">
     <h2>Your Order</h2>
     <table>
         <th> </th>
-        <th>Item Name</th>
-        <th>Cost Each</th>
-        <th>Select Quantity</th>
-        <th>Total Cost</th>
-        <?php include "test.php"; ?>
+        <?php include "sumbit_order.php"; ?>
+
     </table>
+    <div class="line"></div>
+    <h5><?php echo "Subtotal $".$_GET["subtotal"]; ?></h5>
+    <h5><?php echo "Tax $".$_GET["tax"]; ?></h5>
+    <h5><?php echo "Total $".$_GET["total"]; ?></h5>
 </div>
+
 
 
 

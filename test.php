@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
         echo '<th><img src="images/'.$row["image_path"].'"></th>';
         echo '<th>'.$row["food_name"].'</th>';
         echo '<th>'.number_format((float)($row["price"]), 2, '.', '').'</th>';
-        echo '<th><select id="quan'.$index.'" size="1">';
+        echo '<th><select id="quan'.$index.'" size="1" name="sel'.$index.'">';
         for($i =0;$i<100;$i++){
             echo "<option>".$i. "</option>";
         }

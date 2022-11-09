@@ -60,6 +60,7 @@
     <h4>Hours: 7:00pm - 2:00pm</h4>
 </div>
 
+<form action="order.php" method="get">
 
 <div class="box">
     <div class="userInfo"><label>First Name:</label> <input type="text" name='fname'/></div>
@@ -98,8 +99,10 @@
 </div>
 
 
-<input type="button" value="Submit Order" id="hhe"/>
+<input type="submit" value="Submit Order" id="hhe"/>
 
+
+</form>
 
 <script src="index.js"></script>
 
