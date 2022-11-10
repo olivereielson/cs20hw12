@@ -39,6 +39,9 @@
             background-color: #0083b7;
         }
 
+        .time{
+            display: inline;
+        }
         div{
             margin: 10px;
         }
@@ -66,6 +69,29 @@
     <h2>Personal Info</h2>
     <h3><?php echo $_GET["fname"]." ".$_GET["lname"]; ?></h3>
     <h3><?php echo $_GET["instructions"]; ?></h3>
+    <h3 class="time">Your order will be ready at:</h3>
+    <script>
+
+       //get time out of storage
+       let hour=parseInt(localStorage.getItem("hours"));
+       let mins=parseInt(localStorage.getItem("mins"));
+
+       //do some math on the time
+       if(mins>45) {
+           hour++;
+           mins=(mins+15)%60;
+       }
+       hour=hour%12;
+
+       let s="<h3 class='time'>";
+       s=s+hour;
+       s=s+":";
+       s=s+mins;
+       s=s+"</h3>";
+        //write to doc
+       document.writeln(s);
+    </script>
+
 </div>
 
 <div class="box">

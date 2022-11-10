@@ -60,7 +60,7 @@
     <h4>Hours: 7:00pm - 2:00pm</h4>
 </div>
 
-<form action="order.php" method="get">
+<form action="order.php" onsubmit="return validate()" method="get" id="form">
 
 <div class="box">
     <div class="userInfo"><label>First Name:</label> <input type="text" name='fname'/></div>

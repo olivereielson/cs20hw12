@@ -70,6 +70,12 @@ function validate() {
     var d = new Date();
     let hours=d.getHours();
     let mins=d.getMinutes(); // => 9
+    localStorage.clear();
+    localStorage.setItem("hours",hours );
+    localStorage.setItem("mins",mins);
+
+
+    let is_valid = 0;
 
     if((hours>14 && hours<19)||(hours==18 && mins<45)){
         if(!(hours==14 && mins<45)){
@@ -81,7 +87,6 @@ function validate() {
 
 
 
-    let is_valid = 0;
 
     //check all the vals and if null highlight them in red
     is_valid += is_good(last_name == null, "fname");
@@ -95,8 +100,9 @@ function validate() {
 
     //if everything is valid say thanks and build new page
     if (is_valid === 0) {
-        window.open ('order.php','_self',false)
+        return true;
     }
+    return false;
 
 }
 
@@ -118,14 +124,6 @@ $(document).ready(function () {
 
     }
 
-    //add listener to submit
-    $("input[type=button]").click(function () {
-       // validate();
-
-
-        window.open ('order.php','_self',false)
-
-    });
 
     //add listeners to the user inputs
     $("input[name=lname]").change(function () {
